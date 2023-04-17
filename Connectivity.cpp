@@ -6,7 +6,7 @@ int n,m,color[101],g[101][101],c;
 void dfs(ll s){
   color[s]=1;
   for(ll i=1;i<=n;i++){
-    if(g[s][i] && color[i]){
+    if(g[s][i] && !color[i]){
         dfs(i);
     }
   }
